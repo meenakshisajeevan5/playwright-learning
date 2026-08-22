@@ -11,3 +11,7 @@ with sync_playwright() as p:
     expect(page.locator("#column-b header")).to_have_text("A")
     page.wait_for_timeout(3000)
     browser.close()
+    
+    #drag_this.drag_to(drop_here) syntax for drag and drop
+    # header is used because Child element — header is the specific child tag inside #column-a where the actual text "A" or "B" lives. 🙂
+    
